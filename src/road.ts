@@ -1,10 +1,21 @@
 import { lerp } from "./utils";
 
-export class Road{
-    constructor(x,width,laneCount=3){
-        this.x=x;
-        this.width=width;
-        this.laneCount=laneCount;
+interface IRoad {    
+    x: number;
+    width: number;
+    laneCount: number;
+
+    getLaneCenter(laneIndex: number): number;
+
+    draw(ctx: CanvasRenderingContext2D): void;
+}    
+
+
+export class Road implements IRoad {
+    constructor(x:number,width:number ,laneCount:number=5){
+        this.x = x;
+        this.width = width;
+        this.laneCount = laneCount;
 
         this.left=x-width/2;
         this.right=x+width/2;
@@ -23,13 +34,13 @@ export class Road{
         ];
     }
 
-    getLaneCenter(laneIndex){
+    getLaneCenter(laneIndex:number){
         const laneWidth=this.width/this.laneCount;
         return this.left+laneWidth/2+
             Math.min(laneIndex,this.laneCount-1)*laneWidth;
     }
 
-    draw(ctx){
+    draw(ctx:CanvasRenderingContext2D){
         ctx.lineWidth=5;
         ctx.strokeStyle="white";
 
