@@ -20,7 +20,7 @@ export class Car{
         this.useBrain=controlType=="AI";
 
         if(controlType!="DUMMY" && controlType!="KEYS"){
-            this.sensor=new Sensor(this);
+            this.sensor=new Sensor(this, 5);
             this.brain=new NeuralNetwork(
                 [this.sensor.rayCount,6,4]
             );
