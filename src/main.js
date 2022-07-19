@@ -101,7 +101,7 @@ function generateCars(N) {
 
 animate();
 
-function animate() {
+function animate(time) {
 
     activeCars.innerHTML = activeCar;
     //console.log(activeCar);
@@ -151,7 +151,7 @@ function animate() {
 
     carCtx.restore();
 
-    //console.log(networkCtx.width);
+    networkCtx.lineDashOffset = -time/100;
 
     Visualizer.drawNetwork(networkCtx, cars[0].brain);
     requestAnimationFrame(animate);
