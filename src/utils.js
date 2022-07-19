@@ -40,7 +40,7 @@ export function polysIntersect(poly1, poly2){
 }
 
 export function getRGBA(value){
-    const alpha=Math.abs(value);
+    const alpha=Math.abs(value+.2);
     const R=value<0?0:255;
     const G=R;
     const B=value>0?0:255;
