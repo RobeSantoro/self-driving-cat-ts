@@ -4,6 +4,11 @@ interface IRoad {
     x: number;
     width: number;
     laneCount: number;
+    left: number;
+    right: number;
+    top: number;
+    bottom: number;
+    border: Array<{ x: number, y: number }>;
 
     getLaneCenter(laneIndex: number): number;
 
@@ -12,6 +17,10 @@ interface IRoad {
 
 
 export class Road implements IRoad {
+    x: number;
+    width: number;
+    laneCount: number;
+
     constructor(x:number,width:number ,laneCount:number=5){
         this.x = x;
         this.width = width;
