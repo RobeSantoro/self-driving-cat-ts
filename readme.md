@@ -1,6 +1,6 @@
 # Self Driving Cats
 
-Trying to porting to vite-ts
+Porting to vite-ts
 
 ## From:
 
@@ -10,6 +10,6 @@ Trying to porting to vite-ts
 
 [https://www.youtube.com/watch?v=Rs_rAxEsAvI](https://www.youtube.com/watch?v=Rs_rAxEsAvI)
 
-## Check this guy, is amazing!
+## Check this guy, he's amazing!
 
 [Radu Mariescu-Istodor Youtube Channel](https://www.youtube.com/channel/UC3XGlNq8O5hZlZBJlSFB4jg)
